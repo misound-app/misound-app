@@ -1,0 +1,14 @@
+# Netlify Headers — MiSound
+# El index.html nunca se cachea — siempre trae la versión más nueva
+/index.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# Los assets estáticos (íconos, etc.) sí se pueden cachear
+/icons/*
+  Cache-Control: public, max-age=86400
+
+# El service worker nunca se cachea
+/service-worker.js
+  Cache-Control: no-cache, no-store, must-revalidate
